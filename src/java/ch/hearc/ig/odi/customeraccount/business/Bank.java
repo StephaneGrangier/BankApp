@@ -51,15 +51,21 @@ public class Bank {
 
     }
 
-    public void addCustomer(Integer number, String fn, String ln) {
+    public Customer addCustomer(Integer number, String fn, String ln) {
         Customer customer = new Customer(number);
         customers.put(number, customer);
+        return customer;
     }
 
     public void addAccount(String number, String name, Double rate, Customer customer) {
         Account account = new Account(number, name, rate, customer);
         accounts.put(name, account);
 
+    }
+    
+    
+    public Map<Integer, Customer> getCustomers(){
+        return customers;
     }
 
 }
