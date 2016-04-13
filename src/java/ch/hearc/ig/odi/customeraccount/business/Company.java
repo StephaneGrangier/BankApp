@@ -9,7 +9,14 @@ package ch.hearc.ig.odi.customeraccount.business;
  *
  * @author stephane.grangier
  */
-public class Company extends Customer {
+public class Company 
+{
+    String companyName;
+}
+
+/* mis en commentaire pour conformité avec la classe services (qui utilise que Customer)
+
+extends Customer {
     String companyName;
     String phone;
     String fax;
@@ -38,3 +45,4 @@ public class Company extends Customer {
     }
 
 }
+*/

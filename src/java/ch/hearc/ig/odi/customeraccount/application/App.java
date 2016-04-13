@@ -18,7 +18,7 @@ public class App {
 
         //Création du client
         System.out.println("Création du client");
-        Customer client = new Customer(1);
+        Customer client = new Customer(1, "test", "test");
 
         //Création des comptes du client
         System.out.println("Création des comptes du client");

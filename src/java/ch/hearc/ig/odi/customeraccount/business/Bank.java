@@ -52,7 +52,7 @@ public class Bank {
     }
 
     public Customer addCustomer(Integer number, String fn, String ln) {
-        Customer customer = new Customer(number);
+        Customer customer = new Customer(number, fn, ln);
         customers.put(number, customer);
         return customer;
     }

@@ -11,7 +11,15 @@ import java.util.Date;
  *
  * @author floriane.sapin
  */
-public class Individual extends Customer{
+public class Individual {
+    
+}
+
+/* mis en commentaire pour conformité avec la classe services (qui utilise que Customer)
+
+
+*/
+/*extends Customer{
     
     private Date birthDate;
     private String email;
@@ -43,3 +51,4 @@ public class Individual extends Customer{
     }
     
 }
+*/
