@@ -3,10 +3,10 @@ package ch.hearc.ig.odi.customeraccount.presentation.beans;
 import ch.hearc.ig.odi.customeraccount.business.Customer;
 import ch.hearc.ig.odi.customeraccount.service.Services;
 import java.io.Serializable;
-import java.util.ArrayList;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 /*
@@ -23,6 +23,7 @@ import javax.inject.Named;
 @Named
 @SessionScoped
 public class CustomersBean implements Serializable {
+    @Inject Services services;
 
    private DataModel<Customer> lesCustomersDM;
     
@@ -31,7 +32,6 @@ public class CustomersBean implements Serializable {
     
     public DataModel<Customer> getLesCustomersDM(){
         lesCustomersDM = new ListDataModel<Customer>();
-        Services services = new Services();
         lesCustomersDM.setWrappedData(services.getCustomersList()); //injecter de la classe services
         return lesCustomersDM;
     }
