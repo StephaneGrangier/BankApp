@@ -47,6 +47,12 @@ public class Account {
         this.rate = rate;
     }
 
+    public double getBalance() {
+        return balance;
+    }
+    
+    
+
     /**
      *
      * @param amount

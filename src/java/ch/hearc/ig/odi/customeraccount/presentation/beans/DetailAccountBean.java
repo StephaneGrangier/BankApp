@@ -5,6 +5,7 @@
  */
 package ch.hearc.ig.odi.customeraccount.presentation.beans;
 
+import ch.hearc.ig.odi.customeraccount.business.Account;
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
@@ -15,12 +16,28 @@ import javax.inject.Named;
  */
 @Named
 @SessionScoped
-public class DetailAccount implements Serializable{
+public class DetailAccountBean implements Serializable {
+
+    private Account account;
 
     /**
      * Creates a new instance of DetailAccount
      */
-    public DetailAccount() {
+    public DetailAccountBean() {
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
     
+
+    public String showAccount(Account account) {
+        this.account = account;
+        return "detailsAccount";
+    }
+
 }

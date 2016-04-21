@@ -10,25 +10,27 @@
         <h1>Détail du compte</h1>
 
         <p>Numéro de compte:
-            <h:outputText id="custNumero" value="#{detailAccount.account.number}"/>
+            <h:outputText id="AccNo" value="#{detailAccountBean.account.number}"/>
         </p>
 
         <p>Désignation:
-            <h:outputText id="custPrenom" value="#{detailCustomerBean.customer.firstName}"/>
+            <h:outputText id="AccLibelle" value="#{detailAccountBean.account.name}"/>
         </p>
 
         <p>Solde: 
-            <h:outputText id="custNom" value="#{detailCustomerBean.customer.lastName}"/>
+            <h:outputText id="AccSolde" value="#{detailAccountBean.account.balance}"/>
         </p>
 
         <p>Taux: 
-            <h:outputText id="custNom" value="#{detailCustomerBean.customer.lastName}"/>
+            <h:outputText id="AccTaux" value="#{detailAccountBean.account.rate}"/>
         </p>
 
       
 
         <h:form>
-            <h:commandButton id="Annuler" action="customersList.xhtml" value="Retour page accueil"/>
+            <h:commandButton id="retourclient" action="detailsCustomer.xhtml" value="Retour au client"/>
+            <p/>
+            <h:commandButton id="accueil" action="customersList.xhtml" value="Retour page accueil"/>
         </h:form>
     </h:body>
 </html>

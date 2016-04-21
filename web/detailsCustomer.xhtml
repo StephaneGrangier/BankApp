@@ -28,7 +28,7 @@
                     <f:facet name="header">Numero de compte</f:facet>
 
                     <h:commandLink id="idLink"
-                                   action="detailsCustomer.xhtml" >
+                                   action="#{detailAccountBean.showAccount(acc)}" >
                         <h:outputText value="#{acc.number}"/>
                     </h:commandLink>
 
