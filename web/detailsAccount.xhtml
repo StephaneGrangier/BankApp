@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Détail du compte</h1>
+
+        <p>Numéro de compte:
+            <h:outputText id="custNumero" value="#{detailAccount.account.number}"/>
+        </p>
+
+        <p>Désignation:
+            <h:outputText id="custPrenom" value="#{detailCustomerBean.customer.firstName}"/>
+        </p>
+
+        <p>Solde: 
+            <h:outputText id="custNom" value="#{detailCustomerBean.customer.lastName}"/>
+        </p>
+
+        <p>Taux: 
+            <h:outputText id="custNom" value="#{detailCustomerBean.customer.lastName}"/>
+        </p>
+
+      
+
+        <h:form>
+            <h:commandButton id="Annuler" action="customersList.xhtml" value="Retour page accueil"/>
+        </h:form>
+    </h:body>
+</html>
+

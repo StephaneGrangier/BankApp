@@ -12,15 +12,8 @@
             <h:dataTable id="dtCustomers" value ="#{customersBean.lesCustomersDM}" var="cust">
                 <h:column>
                     <f:facet name="header">Numero</f:facet>
-                    <h:outputText id="custNumero" value="#{cust.number}"/>
 
-                  <!-- 
-                  <h:commandLink id="idLink"
-                                   action="detailsCustomer.xhtml" >
-                        <h:outputText value="#{cust.number}"/>
-                    </h:commandLink> 
-                  -->
-                  <h:commandLink id="idLink"
+                    <h:commandLink id="idLink"
                                    action="#{detailCustomerBean.showCustomer(cust)}">
                         <h:outputText value="#{cust.number}"/>
                     </h:commandLink> 

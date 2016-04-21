@@ -30,7 +30,7 @@ public class CustomersBean implements Serializable {
     public CustomersBean() {
     }
     
-    public DataModel<Customer> getLesCustomersDM(){
+    public DataModel<Customer> getlesCustomersDM(){
         lesCustomersDM = new ListDataModel<Customer>();
         lesCustomersDM.setWrappedData(services.getCustomersList()); //injecter de la classe services
         return lesCustomersDM;

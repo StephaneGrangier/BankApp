@@ -8,19 +8,22 @@
     </h:head>
     <h:body>
         <h1>Création d'un nouveau client</h1>
-        
+
         <h:form>
             <p>Numéro: <h:inputText id="numero" value="#{customerCreateBean.numero}" required="true" requiredMessage="champ numero obligatoire"/></p>
             <p>Prénom: <h:inputText id="prenom" value="#{customerCreateBean.firstName}" required="true"/></p>
             <p>Nom: <h:inputText id="nom" value="#{customerCreateBean.lastName}" required="true"/></p>
-            
-            
-            <h:commandButton id="Réinitialiser" action="#{customerCreateBean.reset}" value="Réinitialiser"/>
-            <h:commandButton id="Valider" action="#{customerCreateBean.save}" value="Valider"/>
-            <h:commandButton id="Annuler" action="customersList.xhtml" value="Annuler"/>
-            
+
+                <div> <h:commandButton id="Réinitialiser" action="#{customerCreateBean.reset}" value="Réinitialiser"/>
+                </div>
+                <div> <h:commandButton id="Valider" action="#{customerCreateBean.save}" value="Valider"/>
+                </div>
+                <div><h:commandButton id="Annuler" action="customersList.xhtml" value="Annuler"/>
+                </div>
+                <div style="clear: both; float: none; height: 0;"></div>
+
         </h:form>
-            
+
     </h:body>
 </html>
 

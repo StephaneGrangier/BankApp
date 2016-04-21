@@ -21,8 +21,28 @@
             <h:outputText id="custNom" value="#{detailCustomerBean.customer.lastName}"/>
         </p>
 
-      
+        <h2>Liste des comptes du client</h2>
+        <h:form>
+            <h:dataTable id="dtAccounts" value ="#{detailCustomerBean.getlesAccountDM()}" var="acc">
+                <h:column>
+                    <f:facet name="header">Numero de compte</f:facet>
 
+                    <h:commandLink id="idLink"
+                                   action="detailsCustomer.xhtml" >
+                        <h:outputText value="#{acc.number}"/>
+                    </h:commandLink>
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Désigniation</f:facet>
+                    <h:outputText id="custPrenom" value="#{acc.name}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+
+        <h:form>
+            <h:commandButton id="Annuler" action="customersList.xhtml" value="Retour page accueil"/>
+        </h:form>
     </h:body>
 </html>
 
