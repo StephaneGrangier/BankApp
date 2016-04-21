@@ -21,6 +21,11 @@
         <managed-bean-name>customerCreateBean</managed-bean-name>
         <managed-bean-class>ch.hearc.ig.odi.customeraccount.presentation.beans.CustomerCreateBean</managed-bean-class>
     </managed-bean>
+    <managed-bean>
+        <managed-bean-name>detailCustomerBean</managed-bean-name>
+        <managed-bean-class>ch.hearc.ig.odi.customeraccount.presentation.beans.detailCustomerBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
     <navigation-rule>
         <from-view-id>/customersList.xhtml</from-view-id>
         <navigation-case>
@@ -43,6 +48,12 @@
             <to-view-id>/customersList.xhtml</to-view-id>
         </navigation-case>   
     </navigation-rule>
-    
-    
+    <navigation-rule>
+        <from-view-id>/customersList.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{detailCustomerBean.showCustomer(cust)}</from-action>
+            <from-outcome>details</from-outcome>
+            <to-view-id>/detailsCustomer.xhtml</to-view-id>
+        </navigation-case>   
+    </navigation-rule>
 </faces-config>

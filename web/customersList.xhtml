@@ -8,23 +8,37 @@
     </h:head>
     <h:body>
         <h1>Liste des clients</h1>
-        <h:dataTable id="dtCustomers" value ="#{customersBean.lesCustomersDM}" var="cust">
-            <h:column>
-                <f:facet name="header">Numero</f:facet>
-                <h:outputText id="custNumero" value="#{cust.number}"/>
-            </h:column>
-            <h:column>
-                <f:facet name="header">Prénom</f:facet>
-                <h:outputText id="custPrenom" value="#{cust.firstName}"/>
-            </h:column>
-            <h:column>
-                <f:facet name="header">Nom</f:facet>
-                <h:outputText id="custNom" value="#{cust.lastName}"/>
-            </h:column>
-        </h:dataTable>
-        
+        <h:form>
+            <h:dataTable id="dtCustomers" value ="#{customersBean.lesCustomersDM}" var="cust">
+                <h:column>
+                    <f:facet name="header">Numero</f:facet>
+                    <h:outputText id="custNumero" value="#{cust.number}"/>
+
+                  <!-- 
+                  <h:commandLink id="idLink"
+                                   action="detailsCustomer.xhtml" >
+                        <h:outputText value="#{cust.number}"/>
+                    </h:commandLink> 
+                  -->
+                  <h:commandLink id="idLink"
+                                   action="#{detailCustomerBean.showCustomer(cust)}">
+                        <h:outputText value="#{cust.number}"/>
+                    </h:commandLink> 
+
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Prénom</f:facet>
+                    <h:outputText id="custPrenom" value="#{cust.firstName}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Nom</f:facet>
+                    <h:outputText id="custNom" value="#{cust.lastName}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+
         <p></p>
-        
+
         <h:form>
             <h:commandButton id="add" action="createCustomer.xhtml" value="Ajouter"/>
         </h:form>

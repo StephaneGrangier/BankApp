@@ -36,6 +36,12 @@ public class CustomersBean implements Serializable {
         return lesCustomersDM;
     }
     
+    public Customer getCustomer(int idCustomer){
+        return services.getCustomer(idCustomer);
+    }
+    
+    
+    
     
     
     

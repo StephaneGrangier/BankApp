@@ -4,21 +4,21 @@ import java.util.*;
 
 public class Customer {
 
-	private Map<String, Account> accounts;  //--converti en Map, VP=> Collection<Account> accounts;
-	private int number;
-        private String firstName;
-	private String lastName;
+    private Map<String, Account> accounts;  //--converti en Map, VP=> Collection<Account> accounts;
+    private int number;
+    private String firstName;
+    private String lastName;
 
-	/**
-	 * 
-	 * @param number
-	 */
-	public Customer(Integer number, String firstName, String lastName) {
-            this.number = number;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.accounts = new HashMap();
-	}
+    /**
+     *
+     * @param number
+     */
+    public Customer(Integer number, String firstName, String lastName) {
+        this.number = number;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.accounts = new HashMap();
+    }
 
     public int getNumber() {
         return number;
@@ -43,28 +43,34 @@ public class Customer {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-        
-        
 
-	/**
-	 * 
-	 * @param number
-	 */
-	public Account getAccountByNumber(String number) {
-            return this.accounts.get(number);
-		
-	}
+    /**
+     *
+     * @param number
+     */
+    public Account getAccountByNumber(String number) {
+        return this.accounts.get(number);
 
-	/**
-	 * 
-	 * @param number
-	 * @param name
-	 * @param rate
-	 */
-	public void addAccount(Account account) {
-	
-            accounts.put(account.getNumber(), account);
-            
-	}
+    }
+
+    public Map<String, Account> getAccounts() {
+        return accounts;
+    }
+    
+    public List<Account> getAccountsList(){
+        return new ArrayList(getAccounts().values());
+    }
+
+    /**
+     *
+     * @param number
+     * @param name
+     * @param rate
+     */
+    public void addAccount(Account account) {
+
+        accounts.put(account.getNumber(), account);
+
+    }
 
 }
