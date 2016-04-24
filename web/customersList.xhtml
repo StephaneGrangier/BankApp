@@ -3,11 +3,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:view locale="en"/>
+    <f:loadBundle basename="ch.hearc.ig.odi.customeraccount.config.Message" var="msg"/>
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h1>Liste des clients</h1>
+        <h1>#{msg.titre_cli_list}</h1>
+        
+        <h2>#{msg.titre_accueil}</h2>
         <h:form>
             <h:dataTable id="dtCustomers" value ="#{customersBean.lesCustomersDM}" var="cust">
                 <h:column>

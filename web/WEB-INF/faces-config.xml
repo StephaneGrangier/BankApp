@@ -5,8 +5,8 @@
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
     <application>
         <locale-config>
-            <default-locale>en</default-locale>en
-            <supported-locale>fr</supported-locale>fr
+            <default-locale>en</default-locale>
+            <supported-locale>fr</supported-locale>
         </locale-config>
         <ressource-bundle>
             <base-name>ch.hearc.ig.odi.customeraccount.config.Messages</base-name>
@@ -74,9 +74,4 @@
             <to-view-id>/detailsAccount.xhtml</to-view-id>
         </navigation-case>   
     </navigation-rule>
-    <managed-bean>
-        <managed-bean-name>languageBean</managed-bean-name>
-        <managed-bean-class>ch.hearc.ig.odi.customeraccount.presentation.beans.LanguageBean</managed-bean-class>
-        <managed-bean-scope>none</managed-bean-scope>
-    </managed-bean>
 </faces-config>
